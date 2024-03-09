@@ -65,14 +65,16 @@ playBtn.addEventListener('click', playSound )
 
             } else {
                 // IF THE DATA NOT HAVE THE EXPECTED STRUCTURE, ALERT/LOG AN ERROR
-                alert('Unexpected API response', data);
+
                 console.error(object);('Unexpected API response', data)
             }
         })
         .catch((error) => {
             // IF THERE WAS  AN ERROR WITH THE FETCH OPERATION, ALERT/LOG IT
-            alert('There has been a problem with your fetch operation:', error);
+            
             console.error('There has been a problem with your fetch operation:', error);
+            result.innerHTML = '<h3> word not found</h3>';
+            
         });
     }
 
